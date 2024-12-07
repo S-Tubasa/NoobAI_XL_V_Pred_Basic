@@ -64,8 +64,8 @@
   },
   "6": {
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 1216,
+      "height": 832,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage"
@@ -90,8 +90,8 @@
   "11": {
     "inputs": {
       "upscale_method": "nearest-exact",
-      "width": 1248,
-      "height": 1824,
+      "width": 1824,
+      "height": 1248,
       "crop": "disabled",
       "samples": [
         "5",
