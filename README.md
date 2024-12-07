@@ -25,16 +25,22 @@ wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.
 ```bash
 time python main.py --mode 1 --prompt "cute angel" --save_path "./test.png"
 ```
+NVIDIA L40S
 ```
-
+real    0m14.827s
+user    0m0.097s
+sys     0m0.019s
 ```
 
 ### Portait
 ```bash
 time python main.py --mode 2 --prompt "cute angel" --save_path "./test.png"
 ```
+NVIDIA L40S
 ```
-
+real    0m14.775s
+user    0m0.105s
+sys     0m0.011s
 ```
 
 
