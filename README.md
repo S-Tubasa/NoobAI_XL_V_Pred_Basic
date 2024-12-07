@@ -23,7 +23,7 @@ wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.
 ## Example
 ### LandScape
 ```bash
-time python main.py --mode 1 --prompt "cute angel" --save_path "./test.png"
+time python main.py --mode 1 --prompt "Yumekawa Tenshi's cute angel is flying in the winter sky" --save_path "./test.png"
 ```
 NVIDIA L40S
 ```
@@ -34,7 +34,7 @@ sys     0m0.019s
 
 ### Portait
 ```bash
-time python main.py --mode 2 --prompt "cute angel" --save_path "./test.png"
+time python main.py --mode 2 --prompt "Yumekawa Tenshi's cute angel is flying in the winter sky" --save_path "./test.png"
 ```
 NVIDIA L40S
 ```
