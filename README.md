@@ -14,9 +14,9 @@ pip install -r requirements.txt
 pip install websocket-client
 
 cd models/checkpoints
-wget https://civitai.com/models/833294?token=xxxxxxxx --content-disposition
+wget https://civitai.com/api/download/models/1093948?token=xxxxxxxx --content-disposition
 
-cd models/vea
+cd models/vae
 wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
 ```
 
