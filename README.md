@@ -30,9 +30,9 @@ time python main.py --mode 1 --prompt "Yumekawa Tenshi's cute angel is flying in
 ```
 NVIDIA L40S
 ```
-real    0m14.827s
-user    0m0.097s
-sys     0m0.019s
+real    0m16.998s
+user    0m0.091s
+sys     0m0.020s
 ```
 
 ### Portait
@@ -41,9 +41,9 @@ time python main.py --mode 2 --prompt "Yumekawa Tenshi's cute angel is flying in
 ```
 NVIDIA L40S
 ```
-real    0m14.775s
-user    0m0.105s
-sys     0m0.011s
+real    0m16.794s
+user    0m0.110s
+sys     0m0.000s
 ```
 
 

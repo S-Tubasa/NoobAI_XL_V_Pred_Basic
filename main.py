@@ -36,7 +36,7 @@ def get_images(ws, prompt, server_address, client_id):
                     else:
                         current_node = data["node"]
         else:
-            if current_node == "14":
+            if current_node == "save_image_websocket_node":
                 images_output = output_images.get(current_node, [])
                 images_output.append(out[8:])
                 output_images[current_node] = images_output
