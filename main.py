@@ -79,7 +79,11 @@ def main_prosess(prompt, mode, save_path):
     data = {
         "prompt": prompt,
         "mode": int(mode),
-        "seed": [random.getrandbits(64), random.getrandbits(64)],
+        "seed": [
+            random.getrandbits(64),
+            random.getrandbits(64),
+            random.getrandbits(64),
+        ],
     }
 
     # =======================
@@ -109,11 +113,12 @@ def main_prosess(prompt, mode, save_path):
 
     # ===Update prompt with user data===
 
-    prompt["3"]["inputs"]["text"] = prompt["3"]["inputs"]["text"].format(
+    prompt["18"]["inputs"]["text"] = prompt["18"]["inputs"]["text"].format(
         userprompt=data["prompt"]
     )
     prompt["5"]["inputs"]["seed"] = data["seed"][0]
     prompt["12"]["inputs"]["seed"] = data["seed"][1]
+    prompt["18"]["inputs"]["seed"] = data["seed"][2]
 
     # =======================
 
