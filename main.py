@@ -113,7 +113,7 @@ def main_prosess(prompt, mode, save_path):
 
     # ===Update prompt with user data===
 
-    prompt["18"]["inputs"]["text"] = prompt["18"]["inputs"]["text"].format(
+    prompt["18"]["inputs"]["nl_prompt"] = prompt["18"]["inputs"]["nl_prompt"].format(
         userprompt=data["prompt"]
     )
     prompt["5"]["inputs"]["seed"] = data["seed"][0]
