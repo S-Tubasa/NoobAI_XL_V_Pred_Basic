@@ -14,10 +14,13 @@ pip install -r requirements.txt
 pip install websocket-client
 
 cd models/checkpoints
-wget https://civitai.com/api/download/models/1093948?token=xxxxxxxx --content-disposition
+wget https://civitai.com/api/download/models/1190596?token=xxxxxxxx --content-disposition
 
 cd models/vae
 wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
+
+cd custom_nodes
+git clone https://github.com/KohakuBlueleaf/z-tipo-extension.git
 ```
 
 ## Example

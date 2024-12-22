@@ -1,43 +1,23 @@
 {
   "1": {
     "inputs": {
-      "ckpt_name": "noobaiXLNAIXL_vPred065SVersion.safetensors"
+      "ckpt_name": "noobaiXLNAIXL_vPred10Version.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
-  "2": {
+  "4": {
     "inputs": {
-      "stop_at_clip_layer": -2,
+      "text": "lowres,bad anatomy,blurry,(worst quality:1.8),low quality,hands bad,(normal quality:1.3),bad hands,mutated hands and fingers,extra legs,extra arms,duplicate,cropped,jpeg,artifacts,long body,multiple breasts,mutated,disfigured,bad proportions,bad feet,ugly,text font ui,missing limb,monochrome,face bad,4koma,comic,nfsw",
       "clip": [
         "1",
         1
-      ]
-    },
-    "class_type": "CLIPSetLastLayer"
-  },
-  "3": {
-    "inputs": {
-      "text": "masterpiece, best quality, {userprompt}",
-      "clip": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "4": {
-    "inputs": {
-      "text": "lowres, worst quality, low quality, bad anatomy, bad hands, 4koma, comic, greyscale, censored, jpeg artifacts, overly saturated, overly vivid,nfsw",
-      "clip": [
-        "2",
-        0
       ]
     },
     "class_type": "CLIPTextEncode"
   },
   "5": {
     "inputs": {
-      "seed": 547567605400048,
+      "seed": 291552592330950,
       "steps": 30,
       "cfg": 5,
       "sampler_name": "euler",
@@ -48,7 +28,7 @@
         0
       ],
       "positive": [
-        "3",
+        "21",
         0
       ],
       "negative": [
@@ -56,19 +36,11 @@
         0
       ],
       "latent_image": [
-        "6",
+        "15",
         0
       ]
     },
     "class_type": "KSampler"
-  },
-  "6": {
-    "inputs": {
-      "width": 1216,
-      "height": 832,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage"
   },
   "8": {
     "inputs": {
@@ -102,7 +74,7 @@
   },
   "12": {
     "inputs": {
-      "seed": 545931358687095,
+      "seed": 283004530284442,
       "steps": 12,
       "cfg": 7,
       "sampler_name": "euler",
@@ -113,7 +85,7 @@
         0
       ],
       "positive": [
-        "3",
+        "21",
         0
       ],
       "negative": [
@@ -140,7 +112,48 @@
     },
     "class_type": "VAEDecode"
   },
-  "14": {
+  "15": {
+    "inputs": {
+      "width": 1216,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "18": {
+    "inputs": {
+      "tags": "masterpiece, sensitive, best quality",
+      "nl_prompt": "{userprompt}",
+      "ban_tags": "text, censor, speech, say, comic, panel",
+      "tipo_model": "KBlueLeaf/TIPO-200M-ft | TIPO-200M-ft-F16.gguf",
+      "format": "\n<|characters|>, <|copyrights|>, \n<|artist|>, \n\n<|general|>,\n\n<|extended|>.\n\n<|quality|>, <|meta|>, <|rating|>",
+      "width": 1216,
+      "height": 832,
+      "temperature": 0.75,
+      "top_p": 0.9500000000000001,
+      "min_p": 0.05,
+      "top_k": 80,
+      "tag_length": "short",
+      "nl_length": "short",
+      "seed": 706,
+      "device": "cuda"
+    },
+    "class_type": "TIPO"
+  },
+  "21": {
+    "inputs": {
+      "text": [
+        "18",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "save_image_websocket_node": {
     "inputs": {
       "images": [
         "13",
